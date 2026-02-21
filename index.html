@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heather Lane Therapy — Counselling & Psychotherapy · Leeds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg: #f9f8f6;
+            --sage: #5c7a55;
+            --sage-light: #eef2ec;
+            --text: #1a1a18;
+            --text-muted: #6b6b66;
+            --border: rgba(92, 122, 85, 0.18);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+        }
+
+        /* ── Nav ── */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(249, 248, 246, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: 'Lora', serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--sage); }
+
+        .nav-cta {
+            background: var(--sage);
+            color: #fff !important;
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 0.82rem !important;
+            font-weight: 500;
+            transition: background 0.2s !important;
+        }
+
+        .nav-cta:hover { background: #4d6847 !important; color: #fff !important; }
+
+        /* ── Hero ── */
+        .hero {
+            padding: 100px 24px 80px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--sage);
+            background: var(--sage-light);
+            padding: 5px 14px;
+            border-radius: 100px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            font-style: italic;
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--text);
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 64px;
+        }
+
+        .btn-primary {
+            background: var(--sage);
+            color: #fff;
+            padding: 13px 28px;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-primary:hover { background: #4d6847; }
+
+        .btn-ghost {
+            color: var(--sage);
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-ghost:hover { text-decoration: underline; }
+
+        .stats-row {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .stat-value {
+            font-family: 'Lora', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--sage);
+        }
+
+        .stat-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        /* ── Section shared ── */
+        section {
+            padding: 88px 24px;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-eyebrow {
+            font-size: 0.72rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: clamp(1.7rem, 3vw, 2.3rem);
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .section-body {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            line-height: 1.75;
+        }
+
+        /* ── About ── */
+        #about { background: var(--sage-light); }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+
+        .about-image {
+            aspect-ratio: 4/5;
+            background: linear-gradient(145deg, #c9d8c5 0%, #a8c1a0 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sage);
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        .about-bio {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+
+        .credential-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .pill {
+            background: var(--sage);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 5px 13px;
+            border-radius: 100px;
+        }
+
+        /* ── Approach ── */
+        #approach { background: var(--bg); }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .approach-grid { grid-template-columns: 1fr; }
+        }
+
+        .approach-card {
+            background: var(--sage-light);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 32px;
+        }
+
+        .approach-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--sage);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .approach-icon svg { color: #fff; }
+
+        .approach-card h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-family: 'Lora', serif;
+        }
+
+        .approach-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ── Areas ── */
+        #areas { background: var(--sage-light); }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 36px;
+        }
+
+        .tag {
+            background: #fff;
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-size: 0.85rem;
+            padding: 7px 16px;
+            border-radius: 100px;
+        }
+
+        /* ── How It Works ── */
+        #how { background: var(--bg); }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .steps-grid { grid-template-columns: 1fr; }
+        }
+
+        .step-card {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 32px;
+            position: relative;
+        }
+
+        .step-number {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            color: var(--sage-light);
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 14px;
+        }
+
+        .step-card h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--sage);
+        }
+
+        .step-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* ── Testimonials ── */
+        #testimonials { background: var(--sage); }
+
+        #testimonials .section-eyebrow { color: rgba(255,255,255,0.6); }
+        #testimonials .section-title { color: #fff; }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 14px;
+            padding: 32px;
+        }
+
+        .testimonial-quote {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #fff;
+            line-height: 1.75;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-attr {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* ── FAQ ── */
+        #faq { background: var(--bg); }
+
+        .faq-list {
+            margin-top: 48px;
+            max-width: 760px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text);
+            text-align: left;
+            gap: 16px;
+        }
+
+        .faq-question:hover { color: var(--sage); }
+
+        .faq-icon {
+            flex-shrink: 0;
+            width: 22px;
+            height: 22px;
+            background: var(--sage-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, background 0.2s;
+            color: var(--sage);
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+            background: var(--sage);
+            color: #fff;
+        }
+
+        .faq-answer {
+            display: none;
+            padding-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            max-width: 680px;
+        }
+
+        .faq-item.open .faq-answer { display: block; }
+
+        /* ── Contact ── */
+        #contact { background: var(--sage-light); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--sage);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 120px; }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        .radio-label input { accent-color: var(--sage); }
+
+        .form-submit {
+            background: var(--sage);
+            color: #fff;
+            border: none;
+            padding: 13px 28px;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+            align-self: flex-start;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-submit:hover { background: #4d6847; }
+
+        .form-success {
+            display: none;
+            background: var(--sage);
+            color: #fff;
+            padding: 20px 24px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-family: 'Lora', serif;
+            font-style: italic;
+        }
+
+        .contact-info h3 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .contact-info p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text);
+            margin-bottom: 10px;
+        }
+
+        .contact-detail svg { color: var(--sage); flex-shrink: 0; }
+
+        /* ── Footer ── */
+        footer {
+            background: var(--text);
+            color: rgba(255,255,255,0.4);
+            padding: 36px 24px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-logo {
+            font-family: 'Lora', serif;
+            color: rgba(255,255,255,0.75);
+            font-size: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.35);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+        .footer-copy {
+            font-size: 0.78rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ── Nav ── -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">Heather Lane Therapy</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="#areas">Services</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="nav-cta">Book a Session</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ── Hero ── -->
+    <div class="hero">
+        <span class="hero-eyebrow">Counselling & Psychotherapy · Leeds</span>
+        <h1>A space to be heard.</h1>
+        <p class="hero-sub">
+            A confidential, non-judgemental space where you can explore what's troubling you and begin to find your way forward — at your own pace, in your own time.
+        </p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+            <a href="#about" class="btn-ghost">Learn more →</a>
+        </div>
+        <div class="stats-row">
+            <div class="stat-item">
+                <span class="stat-value">8+</span>
+                <span class="stat-label">Years experience</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">500+</span>
+                <span class="stat-label">Clients supported</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">BACP</span>
+                <span class="stat-label">Accredited member</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── About ── -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-image">Portrait photograph</div>
+                <div>
+                    <p class="section-eyebrow">About Me</p>
+                    <h2 class="section-title">Hi, I'm Heather.</h2>
+                    <p class="about-bio">
+                        I'm a BACP Accredited Counsellor and Psychotherapist based in Leeds, with over eight years of experience supporting individuals through some of life's most challenging moments.
+                    </p>
+                    <p class="about-bio">
+                        My practice draws on Person-Centred, Cognitive Behavioural (CBT) and EMDR approaches, tailored to what works best for you. I work with adults facing anxiety, depression, trauma, relationship difficulties, grief and more.
+                    </p>
+                    <p class="about-bio">
+                        Sessions are available in person at my practice in Headingley, or online via secure video call.
+                    </p>
+                    <div class="credential-pills">
+                        <span class="pill">BACP Accredited</span>
+                        <span class="pill">MA Counselling & Psychotherapy</span>
+                        <span class="pill">EMDR Practitioner</span>
+                        <span class="pill">CBT Trained</span>
+                        <span class="pill">DBS Checked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Approach ── -->
+    <section id="approach">
+        <div class="section-inner">
+            <p class="section-eyebrow">My Approach</p>
+            <h2 class="section-title">How we work together</h2>
+            <p class="section-body">
+                There's no single path to feeling better. I draw on a range of evidence-based approaches and adapt them to suit what's right for you.
+            </p>
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Person-Centred</h3>
+                    <p>A warm, non-directive space where you lead. I offer genuine empathy, unconditional positive regard and congruence — the conditions for natural growth and healing.</p>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3>CBT</h3>
+                    <p>Cognitive Behavioural Therapy helps identify and gently challenge unhelpful thought patterns and behaviours, building practical skills you can use every day.</p>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3>EMDR</h3>
+                    <p>Eye Movement Desensitisation and Reprocessing is a clinically proven therapy for trauma and PTSD, helping the mind process and integrate difficult memories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Areas ── -->
+    <section id="areas">
+        <div class="section-inner">
+            <p class="section-eyebrow">Areas I Can Help</p>
+            <h2 class="section-title">You don't have to face this alone</h2>
+            <p class="section-body">
+                I work with a wide range of difficulties. If something isn't listed here, please get in touch — it's likely I can still help.
+            </p>
+            <div class="tag-cloud">
+                <span class="tag">Anxiety</span>
+                <span class="tag">Depression</span>
+                <span class="tag">Grief & Loss</span>
+                <span class="tag">Trauma & PTSD</span>
+                <span class="tag">Burnout</span>
+                <span class="tag">Low Self-Esteem</span>
+                <span class="tag">Relationship Difficulties</span>
+                <span class="tag">Life Transitions</span>
+                <span class="tag">Work Stress</span>
+                <span class="tag">Bereavement</span>
+                <span class="tag">Panic Attacks</span>
+                <span class="tag">OCD</span>
+                <span class="tag">Phobias</span>
+                <span class="tag">Anger Management</span>
+                <span class="tag">Identity & Self-Discovery</span>
+                <span class="tag">Loneliness</span>
+                <span class="tag">Family Issues</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── How It Works ── -->
+    <section id="how">
+        <div class="section-inner">
+            <p class="section-eyebrow">How It Works</p>
+            <h2 class="section-title">Getting started is simple</h2>
+            <p class="section-body">
+                Taking the first step can feel daunting. I've made the process as straightforward as possible.
+            </p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Reach Out</h3>
+                    <p>Fill in the contact form or send me an email. I'll get back to you within 48 hours to arrange a free 15-minute phone consultation.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>First Session</h3>
+                    <p>Your first session is an opportunity to meet, discuss what brings you to therapy, and decide together whether we're a good fit — no pressure.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Ongoing Support</h3>
+                    <p>We meet weekly or fortnightly, working at a pace that suits you. Sessions are 50 minutes and held at the same time each week for consistency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Testimonials ── -->
+    <section id="testimonials">
+        <div class="section-inner">
+            <p class="section-eyebrow">Testimonials</p>
+            <h2 class="section-title">What clients say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"I was sceptical about therapy, but Heather made me feel safe from the very first session. I've learned so much about myself and finally feel like I have the tools to manage my anxiety."</p>
+                    <p class="testimonial-attr">— Anonymous client, 2024</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"EMDR with Heather genuinely changed my life. I'd carried the weight of a traumatic event for years. After a few months of sessions I feel lighter than I have in a decade."</p>
+                    <p class="testimonial-attr">— Anonymous client, 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section id="faq">
+        <div class="section-inner">
+            <p class="section-eyebrow">FAQ</p>
+            <h2 class="section-title">Common questions</h2>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How long does therapy take?
+                        <span class="faq-icon">
+                            <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        There's no fixed answer — it depends entirely on you and what you're working through. Some people find six to eight sessions helpful; others benefit from longer-term work. We'll review regularly and you're always free to stop when you're ready.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        What are your fees?
+                        <span class="faq-icon">
+                            <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        Sessions are £65 for 50 minutes. A limited number of reduced-fee places are available for those on lower incomes — please mention this when you get in touch.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Do you offer online sessions?
+                        <span class="faq-icon">
+                            <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes. I offer sessions via secure video call (Zoom or equivalent) as well as in-person at my practice in Headingley, Leeds. Many clients find online sessions just as effective and more convenient.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Is everything I say confidential?
+                        <span class="faq-icon">
+                            <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes. Confidentiality is fundamental to our work together. Everything discussed remains between us, with the only exceptions being if I have serious concerns about your safety or the safety of others — which I would always discuss with you first wherever possible.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        I've never had therapy before. Is it right for me?
+                        <span class="faq-icon">
+                            <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        Many of my clients come to therapy for the first time. A free 15-minute phone consultation is a great way to ask questions and get a sense of whether it feels right — with no commitment needed.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section id="contact">
+        <div class="section-inner">
+            <div class="contact-grid">
+                <div>
+                    <p class="section-eyebrow">Contact</p>
+                    <h2 class="section-title">Get in touch</h2>
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full name</label>
+                            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone number (optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+44 7700 900000">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">What brings you to therapy?</label>
+                            <textarea id="message" name="message" placeholder="A brief description — this helps me understand how I might support you." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred contact method</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="contact_method" value="email" checked> Email
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="contact_method" value="phone"> Phone call
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="contact_method" value="text"> Text message
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="form-submit">Send Message</button>
+                        <div class="form-success" id="formSuccess">
+                            Thank you for getting in touch. I'll be in touch within 48 hours.
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Practice details</h3>
+                    <p>
+                        I work with clients across Leeds and online. All sessions are confidential and conducted in a warm, private setting.
+                    </p>
+                    <div class="contact-detail">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        Headingley, Leeds, LS6
+                    </div>
+                    <div class="contact-detail">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        hello@heatherlane.co.uk
+                    </div>
+                    <div class="contact-detail">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        07700 900 000
+                    </div>
+                    <p style="margin-top:28px; font-size:0.85rem; color:var(--text-muted); line-height:1.7;">
+                        I aim to respond to all enquiries within 48 hours (Mon–Fri). If you are in crisis, please contact the Samaritans on <strong>116 123</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer>
+        <div class="footer-inner">
+            <span class="footer-logo">Heather Lane Therapy</span>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#approach">Approach</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <span class="footer-copy">© 2024 Heather Lane Therapy. BACP Accredited.</span>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+                // Toggle clicked
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // Contact form success state
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
